@@ -1,0 +1,82 @@
+:root {
+    --star-size: 60px;
+    --star-color: rgba(0, 0, 0, 0.404);
+    --star-background: #fc0;
+}
+
+.Stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    font-family: Times;
+    line-height: 1;
+}
+
+.Stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg,
+            var(--star-background) var(--percent),
+            var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    background-color: gray;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.product-rating-star {
+    color: #ffc107;
+    font-size: 30px;
+}
+
+.card {
+    margin: 10px;
+    height: 100%;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: white;
+    text-align: center;
+    height: 250px;
+}
+
+.discount-percentage {
+    color: green;
+    font-weight: bold;
+}
+
+.original-price {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.discounted-price {
+    color: black;
+    font-weight: bold;
+}
